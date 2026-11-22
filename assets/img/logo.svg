@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <linearGradient id="tileGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="85%" stop-color="#F4EADB"/>
+      <stop offset="100%" stop-color="#E2D2BC"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2DE9D"/>
+      <stop offset="50%" stop-color="#C9A45C"/>
+      <stop offset="100%" stop-color="#9C772F"/>
+    </linearGradient>
+    <filter id="tileShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Gold Ring Border -->
+  <circle cx="80" cy="80" r="74" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-dasharray="8 4"/>
+  <circle cx="80" cy="80" r="68" fill="#3B090B"/>
+
+  <!-- Mahjong Tile Base -->
+  <g filter="url(#tileShadow)">
+    <!-- Tile Back Layer (Burgundy/Jade Backing) -->
+    <rect x="42" y="30" width="76" height="100" rx="12" fill="#650F14" stroke="#C9A45C" stroke-width="1.5"/>
+    <!-- Tile Front Face -->
+    <rect x="44" y="32" width="72" height="96" rx="10" fill="url(#tileGrad)" stroke="#D5C5AE" stroke-width="1"/>
+  </g>
+
+  <!-- Red Dragon Character: 中 (Zhong / Red Dragon) -->
+  <g fill="#9B2529" stroke="#650F14" stroke-width="0.5">
+    <!-- Box part of 中 -->
+    <rect x="56" y="52" width="48" height="34" rx="4" fill="none" stroke="#9B2529" stroke-width="6"/>
+    <!-- Center vertical bar -->
+    <rect x="76" y="38" width="8" height="64" rx="3" fill="#9B2529"/>
+  </g>
+  <!-- Gold Accent Dots -->
+  <circle cx="80" cy="116" r="3" fill="url(#goldGrad)"/>
+  <circle cx="70" cy="116" r="2" fill="url(#goldGrad)"/>
+  <circle cx="90" cy="116" r="2" fill="url(#goldGrad)"/>
+</svg>
