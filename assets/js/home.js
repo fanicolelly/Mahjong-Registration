@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
       const isOpen = navMenuContainer.classList.toggle('open');
       hamburger.classList.toggle('is-active', isOpen);
-      hamburger.setAttribute('aria-expanded', isOpen);
     });
 
     // Tutup menu jika click di luar navbar
@@ -49,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!navMenuContainer.contains(e.target) && !hamburger.contains(e.target)) {
         navMenuContainer.classList.remove('open');
         hamburger.classList.remove('is-active');
-        hamburger.setAttribute('aria-expanded', 'false');
       }
     });
 
@@ -60,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (window.innerWidth < 992) {
           navMenuContainer.classList.remove('open');
           hamburger.classList.remove('is-active');
-          hamburger.setAttribute('aria-expanded', 'false');
         }
       });
     });
