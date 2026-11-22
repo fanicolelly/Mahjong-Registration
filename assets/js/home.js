@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const toastCloseBtn = document.getElementById('toastCloseBtn');
 
   if (toast) {
-    // Tampilkan toast dengan transisi masuk
+    // toast dengan transisi masuk
     setTimeout(() => {
       toast.classList.add('show');
     }, 100);
 
-    // Otomatis tutup setelah 4 detik (~4000ms)
+    // Otomatis tutup setelah 4 detik
     const toastTimer = setTimeout(() => {
       dismissToast();
     }, 4000);
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Fungsi menutup dan menghapus toast dari DOM
+    // Fungsi utk menutup dan menghapus toast dari DOM
     function dismissToast() {
       toast.classList.remove('show');
       toast.classList.add('hide');
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* NAVBAR MOBILE (Hamburger Menu Toggle) */
+  /* NAVBAR MOBILE (Hamburger Menu) */
   const hamburger = document.getElementById('navHamburger');
   const navMenuContainer = document.getElementById('navMenuContainer');
 
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hamburger.setAttribute('aria-expanded', isOpen);
     });
 
-    // Tutup menu jika klik di luar navbar
+    // Tutup menu jika click di luar navbar
     document.addEventListener('click', (e) => {
       if (!navMenuContainer.contains(e.target) && !hamburger.contains(e.target)) {
         navMenuContainer.classList.remove('open');
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Tutup menu ketika link navigasi diklik pada tampilan HP
+    // Tutup menu ketika link navigation diklik pada tampilan HP
     const navLinks = navMenuContainer.querySelectorAll('.nav-link');
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
