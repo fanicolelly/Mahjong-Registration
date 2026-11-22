@@ -41,12 +41,12 @@ $myBookingsUrl = $isLoggedIn ? 'riwayat/index.php' : 'login.php?pesan=harus_logi
   <!-- TOAST NOTIFICATION (Pesan Sesi Dinamis) -->
   <?php if (!empty($notifMessage)): ?>
     <div class="toast-container">
-      <div id="toastNotification" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div id="toastNotification" class="toast">
         <div class="toast-content">
           <i class="fa-solid fa-circle-check toast-icon"></i>
           <span><?php echo htmlspecialchars($notifMessage, ENT_QUOTES, 'UTF-8'); ?></span>
         </div>
-        <button type="button" id="toastCloseBtn" class="toast-close" aria-label="Tutup notifikasi">
+        <button type="button" id="toastCloseBtn" class="toast-close">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
@@ -56,15 +56,15 @@ $myBookingsUrl = $isLoggedIn ? 'riwayat/index.php' : 'login.php?pesan=harus_logi
   <!-- NAVBAR (nanti dipindah ke includes/header.php) -->
   <header class="navbar-wrapper">
     <div class="container">
-      <nav class="navbar" aria-label="Navigasi Utama">
+      <nav class="navbar">
         <!-- Brand Logo (Kiri) -->
-        <a href="index.php" class="brand" aria-label="Mahjong House Beranda">
+        <a href="index.php" class="brand">
           <img src="assets/img/logo.svg" alt="Logo Mahjong House" class="brand-icon">
           <span>Mahjong <span class="gold">House</span></span>
         </a>
 
         <!-- Hamburger Button untuk Tampilan Mobile -->
-        <button class="hamburger" id="navHamburger" aria-label="Buka Menu Navigasi" aria-expanded="false">
+        <button class="hamburger" id="navHamburger">
           <span></span>
           <span></span>
           <span></span>
@@ -87,7 +87,7 @@ $myBookingsUrl = $isLoggedIn ? 'riwayat/index.php' : 'login.php?pesan=harus_logi
             <?php else: ?>
               <!-- Pengguna Sudah Login -->
               <div class="user-dropdown">
-                <button type="button" class="user-toggle" id="userDropdownToggle" aria-haspopup="true">
+                <button type="button" class="user-toggle" id="userDropdownToggle">
                   <span class="user-avatar">
                     <i class="fa-solid fa-user"></i>
                   </span>
