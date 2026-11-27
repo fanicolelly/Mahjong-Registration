@@ -33,10 +33,10 @@ $myBookingsUrl = $isLoggedIn ? 'riwayat/index.php' : 'login.php?pesan=harus_logi
   <!-- Font Awesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Custom CSS Home Page dengan Cache-Busting (?v=time) agar update CSS langsung terbaca browser -->
-  <link rel="stylesheet" href="assets/css/home.css?v=<?php echo time(); ?>">
+  <!-- Tailwind CSS v4 CDN & Custom Layer Components -->
+  <?php include 'includes/tailwind.php'; ?>
 </head>
-<body>
+<body class="font-body">
 
   <!-- TOAST NOTIFICATION (Pesan Sesi Dinamis) -->
   <?php if (!empty($notifMessage)): ?>
@@ -92,7 +92,7 @@ $myBookingsUrl = $isLoggedIn ? 'riwayat/index.php' : 'login.php?pesan=harus_logi
                     <i class="fa-solid fa-user"></i>
                   </span>
                   <span>Hi, <?php echo htmlspecialchars($userName, ENT_QUOTES, 'UTF-8'); ?></span>
-                  <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i>
+                  <i class="fa-solid fa-chevron-down text-xs"></i>
                 </button>
                 <div class="dropdown-menu" id="userDropdownMenu">
                   <div class="dropdown-header">Akun Saya</div>
@@ -145,7 +145,6 @@ $myBookingsUrl = $isLoggedIn ? 'riwayat/index.php' : 'login.php?pesan=harus_logi
             <div class="availability-card">
               <div class="card-top-bar">
                 <span class="availability-label">Availability</span>
-                <span class="status-badge">Buka Hari Ini</span>
               </div>
               <div class="card-content-wrap">
                 <div class="card-features-list">

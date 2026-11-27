@@ -51,11 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Tutup menu ketika link navigation diklik pada tampilan HP
+    // Tutup menu ketika link navigation diklik pada tampilan HP (breakpoint lg = 1024px)
     const navLinks = navMenuContainer.querySelectorAll('.nav-link');
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
-        if (window.innerWidth < 992) {
+        if (window.innerWidth < 1024) {
           navMenuContainer.classList.remove('open');
           hamburger.classList.remove('is-active');
         }

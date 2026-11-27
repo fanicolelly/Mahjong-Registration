@@ -16,10 +16,10 @@
   <!-- Font Awesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Custom CSS Auth -->
-  <link rel="stylesheet" href="assets/css/auth.css?v=<?php echo time(); ?>">
+  <!-- Tailwind CSS v4 CDN & Custom Layer Components -->
+  <?php include 'includes/tailwind.php'; ?>
 </head>
-<body>
+<body class="font-body">
 
   <div class="auth-wrapper">
     <!-- Brand Logo -->

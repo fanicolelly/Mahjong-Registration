@@ -21,9 +21,10 @@ if (isset($_GET['pesan'])) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/auth.css?v=<?php echo time(); ?>">
+  <!-- Tailwind CSS v4 CDN & Custom Layer Components -->
+  <?php include 'includes/tailwind.php'; ?>
 </head>
-<body>
+<body class="font-body">
 
   <div class="auth-wrapper">
     <!-- Brand Logo -->
